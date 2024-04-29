@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p id="numdot"> XXX</p>
+    <div>
+      <button id="clearCanvas">Clear Canvas</button>
+    </div>
+    <div>
+      <label for="drawingMode">Driving Modes: </label><br>
+      <button id="modePoint">Squares</button>
+      <button id="modeTriangle">Triangles</button>
+      <button id="modeCircle">Circles</button>
+      <button id="drawSnowflakeButton">Snowflakes</button>
+      <button id="drawPineappleButton">Draw Pineapple</button>
+
+
+    </div>
+    <div>
+      <label for="shapeColor">Shape Color: </label><br>
+      <label for="redSlider">Red: </label>
+      <input type="range" id="redSlider" min="0" max="1" step="0.01" value="0">
+      <label for="greenSlider">Green: </label>
+      <input type="range" id="greenSlider" min="0" max="1" step="0.01" value="0">
+      <label for="blueSlider">Blue: </label>
+      <input type="range" id="blueSlider" min="0" max="1" step="0.01" value="0">
+  </div>
+  <div>
+    <label for="sizeSlider">Shape Size: </label>
+    <input type="range" id="sizeSlider" min="5" max="40" value="5" step="1">
+    <label for="segmentsSlider">(Circles) Segment Count:</label>
+    <input type="range" id="segmentsSlider" name="segmentsSlider" min="10" max="100" value="10">
+  </div>
+  <div>
+    <label for="cameraSlider">Camera Angle:</label>
+    <input type="range" id="cameraSlider" name="cameraAngle" min="0" max="360" value="0">
+  </div>
+  <div>
+    <label for="yellowSlider">Body</label>
+    <input type="range" id="yellowSlider" name="yellowArm" min="-45" max="45" value="0">
+    <label for="animationButtons">Animation:</label>
+    <button id="animationONButtonY">ON</button>
+    <button id="animationOFFButtonY">OFF</button>
+
+  </div>
+  <div>
+    <label for="magentaSlider">Head</label>
+    <input type="range" id="magentaSlider" name="magentaHat" min="-45" max="45" value="0">
+    <label for="animationButtons">Animation:</label>
+    <button id="animationONButtonM">ON</button>
+    <button id="animationOFFButtonM">OFF</button>
+  </div>
+  <div>
+    <div>
+      <label for="leftArmSlider">Left Arm</label>
+      <input type="range" id="leftArmSlider" name="leftArm" min="-45" max="45" value="0">
+      <label for="animationButtons">Animation:</label>
+      <button id="animationONButtonLA">ON</button>
+      <button id="animationOFFButtonLA">OFF</button>
+    </div>
+    <div>
+      <label for="rightArmSlider">Right Arm</label>
+      <input type="range" id="rightArmSlider" name="leftArm" min="-45" max="0" value="0">
+      <label for="animationButtons">Animation:</label>
+      <button id="animationONButtonRA">ON</button>
+      <button id="animationOFFButtonRA">OFF</button>
+    </div>
+    <div>
+      <div>
+        <div>
+          <label for="leftLegSlider">Left Leg</label>
+          <input type="range" id="leftLegSlider" name="leftLeg" min="-45" max="45" value="0">
+          <label for="animationButtons">Animation:</label>
+          <button id="animationONButtonLL">ON</button>
+          <button id="animationOFFButtonLL">OFF</button>
+        </div>
+        <div>
+          <label for="rightLegSlider">Right Leg</label>
+          <input type="range" id="rightLegSlider" name="rightLeg" min="-45" max="0" value="0">
+          <label for="animationButtons">Animation:</label>
+          <button id="animationONButtonRL">ON</button>
+          <button id="animationOFFButtonRL">OFF</button>
+        </div>
+        <div>
+  </div>
+    <!-- <img src="pineapple.jpg"> -->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="BlockyAnimal.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Snowflake.js"></script>
+    <script src="Cube.js"></script>
+  </body>
+</html>
